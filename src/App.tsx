@@ -4,10 +4,14 @@ import { PopoverComponent } from 'react-popoverjs';
 const App: React.FC = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [target, setTarget] = useState<HTMLElement | null>(null);
-  const content: string = `Welcome to react-popoverjs!
-      Use this library to create popovers in your React applications.
-      You can customize the content, position, and style of the popovers.
-      It uses the baseline browser Popover API, and Popper.js for positioning, so it's lightweight and fast.`;
+  const content: string = `
+    <div>
+      Welcome to react-popoverjs!<br />
+      Use this library to create popovers in your React applications.<br />
+      You can customize the content, position, and style of the popovers.<br />
+      It utilizes the standard <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API">browser Popover API</a>, and Popper.js for positioning, ensuring it is lightweight and fast.
+    </div>
+  `;
 
   useEffect(() => {
     if (buttonRef.current) {
